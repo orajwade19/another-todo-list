@@ -1,0 +1,69 @@
+input[type="checkbox"] {
+  transform: scale(2);
+}
+
+.list-item-done {
+  text-decoration: line-through;
+}
+
+.form-control {
+  background-color: #1a1423;
+  color: #96705b;
+  border: none;
+}
+
+.form-control:focus {
+  background-color: #1a1423;
+  color: #96705b;
+  border: 1px solid #96705b;
+  border-radius: 25px;
+  box-shadow: none;
+}
+
+.input-group-text {
+  background-color: #1a1423;
+  border: none;
+}
+
+.form-check-input {
+  background-color: #3d314a;
+  color: #96705b;
+}
+
+.form-check-input:focus {
+  background-color: #3d314a;
+  box-shadow: none;
+  border: none;
+  color: #96705b;
+}
+
+.form-check-input:checked {
+  background-color: #3d314a;
+  box-shadow: none;
+  border: none;
+  color: #96705b;
+}
+
+.btn-primary {
+  background-color: #684756;
+  border-color: #684756;
+  color: #1a1423;
+}
+
+.btn-primary:focus {
+  background-color: #684756;
+  border-color: #684756;
+  color: #1a1423;
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  background-color: #96705b;
+  border-color: #96705b;
+  color: #1a1423;
+}
+
+body {
+  background-color: #1a1423;
+  color: #96705b;
+}
