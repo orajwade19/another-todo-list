@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CheckListItem from "./CheckListItem";
 import _uniqueId from "lodash/uniqueId";
 
-function CheckList() {
+function CheckList({ onToggleDarkMode, getNextMode }) {
   const [listItems, setListItems] = useState([
     { itemId: _uniqueId(), checked: false, itemText: "AAA" },
     { itemId: _uniqueId(), checked: false, itemText: "BBB" },
@@ -32,7 +32,11 @@ function CheckList() {
 
   function addItem() {
     const aCloneList = [...listItems];
-    aCloneList.unshift({ itemId: _uniqueId(), checked: false, itemText: "" });
+    aCloneList.unshift({
+      itemId: _uniqueId(),
+      checked: false,
+      itemText: "Task here!",
+    });
     setListItems(aCloneList);
   }
 
@@ -44,6 +48,13 @@ function CheckList() {
         onClick={addItem}
       >
         Click me to add an item!
+      </button>
+      <button
+        type="button"
+        className="btn btn-primary btn-lg m-2"
+        onClick={onToggleDarkMode}
+      >
+        {getNextMode() + "Mode!"}
       </button>
       {listItems.map((c) => (
         <CheckListItem
